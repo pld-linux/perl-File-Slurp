@@ -36,7 +36,7 @@ w kontek¶cie warto¶ci, zwróci ca³y plik w pojedynczym ³añcuchu.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %install
