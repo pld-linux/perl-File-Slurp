@@ -11,7 +11,7 @@ Name:		perl-File-Slurp
 Version:	9999.04
 Release:	1
 # same as perl
-License:	GPL or Artistic
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	cbcc7a597631b54581e50d8bb1743a49
