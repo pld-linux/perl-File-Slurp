@@ -8,13 +8,13 @@
 Summary:	File::Slurp - efficient reading/writing of complete files
 Summary(pl):	File::Slurp - wydajny odczyt/zapis ca³ych plików
 Name:		perl-File-Slurp
-Version:	9999.01
+Version:	9999.02
 Release:	1
 # same as perl
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	89318cc226e22259b1c13ce69fab86e5
+# Source0-md5:	0f56bfaabf1a7cdab1e6dfbfa32af8a0
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
