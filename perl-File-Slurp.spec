@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	File
 %define	pnam	Slurp
-%include	/usr/lib/rpm/macros.perl
 Summary:	File-Slurp perl module
 Summary(pl):	Modu³ perla File-Slurp
 Name:		perl-File-Slurp
 Version:	2001.1103
-Release:	3
-
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -22,7 +21,7 @@ File-Slurp perl module.
 Modu³ perla File-Slurp.
 
 %prep
-%setup -q -n File-Slurp-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
