@@ -5,37 +5,44 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	File
 %define	pnam	Slurp
-Summary:	File::Slurp - single call read & write file routines; read directories
-Summary(pl):	File::Slurp - funkcje zapisu i odczytu za pojedynczym wywo³aniem
+Summary:	File::Slurp - efficient reading/writing of complete files
+Summary(pl):	File::Slurp - wydajny odczyt/zapis ca³ych plików
 Name:		perl-File-Slurp
-Version:	2004.0904
+Version:	9999.01
 Release:	1
-License:	GPL
+# same as perl
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	96239bbc1cfdfc4ab5f59cf4a490855a
-BuildRequires:	perl-devel >= 5.6
+# Source0-md5:	89318cc226e22259b1c13ce69fab86e5
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-These are quickie routines that are meant to save a couple of lines of
-code over and over again. They do not do anything fancy.
+This module provides subs that allow you to read or write entire files
+with one simple call. They are designed to be simple to use, have
+flexible ways to pass in or get the file contents and to be very
+efficient. There is also a sub to read in all the files in a directory
+other than . and .. .
 
-read_file() does what you would expect. If you are using its output in
-array context, then it returns an array of lines. If you are calling
-it from scalar context, then returns the entire file in a single
-string.
+Note that these slurp/spew subs work only for files and not for pipes
+or stdio. If you want to slurp the latter, use the standard techniques
+such as setting $/ to undef, reading <> in a list context, or printing
+all you want to STDOUT.
 
 %description -l pl
-Ten modu³ zawiera szybkie funkcje, które maj± s³u¿yæ do zaoszczêdzenia
-wpisywania tych samych linii kodu wiele razy. Nie robi± niczego
-fantazyjnego.
+Ten modu³ dostarcza funkcje pozwalaj±ce na odczyt lub zapis ca³ych
+plików pojedynczym wywo³aniem. Zosta³y zaprojektowane tak, aby by³y
+proste w u¿yciu, umo¿liwia³y przekazywanie lub pobieranie zawarto¶ci
+plików w elastyczny sposób oraz by³y bardzo wydajne. Jest tak¿e
+funkcja do odczytu wszystkich plików w katalogu innym ni¿ . i .. .
 
-Funkcja read_file() robi to, czego mo¿na siê spodziewaæ. Je¶li u¿yæ
-jej wyj¶cia w kontek¶cie tablicy, zwróci tablicê linii. Je¶li u¿yæ jej
-w kontek¶cie warto¶ci, zwróci ca³y plik w pojedynczym ³añcuchu.
+Nale¿y zauwa¿yæ, ¿e te funkcje dzia³aj± tylko dla plików, a nie
+potoków czy standardowego wej¶cia/wyj¶cia. Dla tych urz±dzeñ pozostaj±
+standardowe techniki, takie jak ustawianie $/ na undef, czytanie <> w
+kontek¶cie listy lub pisanie wszystkiego co chcemy na STDOUT.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -58,6 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG README
+%doc Changes README
 %{perl_vendorlib}/File/Slurp.pm
 %{_mandir}/man3/*
