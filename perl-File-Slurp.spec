@@ -38,7 +38,7 @@ w kontek¶cie warto¶ci, zwróci ca³y plik w pojedynczym ³añcuchu.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
