@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	File
-%define	pnam	Slurp
+%define		pdir	File
+%define		pnam	Slurp
 Summary:	File::Slurp - efficient reading/writing of complete files
 Summary(pl):	File::Slurp - wydajny odczyt/zapis ca³ych plików
 Name:		perl-File-Slurp
