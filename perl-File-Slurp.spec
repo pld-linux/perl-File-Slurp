@@ -1,15 +1,19 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	File
 %define	pnam	Slurp
-Summary:	File::Slurp -- single call read & write file routines; read directories
+Summary:	File::Slurp - single call read & write file routines; read directories
 Summary(pl):	File::Slurp - funkcje zapisu i odczytu za pojedynczym wywo³aniem
 Name:		perl-File-Slurp
-Version:	2002.1031
-Release:	2
+Version:	2004.0904
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	92eeb34d54e0347f0a70adf45c119a4c
+# Source0-md5:	96239bbc1cfdfc4ab5f59cf4a490855a
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -41,16 +45,19 @@ w kontek¶cie warto¶ci, zwróci ca³y plik w pojedynczym ³añcuchu.
 	INSTALLDIRS=vendor
 %{__make}
 
+%{?with_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc CHANGELOG README
 %{perl_vendorlib}/File/Slurp.pm
 %{_mandir}/man3/*
