@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	File
 %define	pnam	Slurp
-Summary:	File-Slurp perl module
-Summary(pl):	Modu³ perla File-Slurp
+Summary:	File::Slurp perl module
+Summary(pl):	Modu³ perla File::Slurp
 Name:		perl-File-Slurp
 Version:	2001.1103
 Release:	4
@@ -15,10 +15,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-File-Slurp perl module.
+File::Slurp perl module.
 
 %description -l pl
-Modu³ perla File-Slurp.
+Modu³ perla File::Slurp.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
