@@ -4,8 +4,8 @@
 Summary:	File::Slurp -- single call read & write file routines; read directories
 Summary(pl):	File::Slurp - funkcje zapisu i odczytu za pojedynczym wywo³aniem
 Name:		perl-File-Slurp
-Version:	2002.0305
-Release:	3
+Version:	2002.1031
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
