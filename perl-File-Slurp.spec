@@ -2,8 +2,8 @@
 Summary:	File-Slurp perl module
 Summary(pl):	Modu³ perla File-Slurp
 Name:		perl-File-Slurp
-Version:	98.071901
-Release:	5
+Version:	2001.1103
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
