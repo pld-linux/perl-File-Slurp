@@ -5,12 +5,12 @@ Summary:	File::Slurp -- single call read & write file routines; read directories
 Summary(pl):	File::Slurp - funkcje zapisu i odczytu za pojedynczym wywo³aniem
 Name:		perl-File-Slurp
 Version:	2002.1031
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,7 +36,8 @@ w kontek¶cie warto¶ci, zwróci ca³y plik w pojedynczym ³añcuchu.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -50,5 +51,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%{perl_sitelib}/File/Slurp.pm
+%{perl_vendorlib}/File/Slurp.pm
 %{_mandir}/man3/*
