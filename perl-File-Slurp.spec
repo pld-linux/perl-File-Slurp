@@ -1,11 +1,10 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	File
 %define	pnam	Slurp
-Summary:	File::Slurp perl module
-Summary(pl):	Modu³ perla File::Slurp
+Summary:	File::Slurp -- single call read & write file routines; read directories
 Name:		perl-File-Slurp
 Version:	2002.0305
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -15,10 +14,12 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-File::Slurp perl module.
+These are quickie routines that are meant to save a couple of lines of
+code over and over again.  They do not do anything fancy.
 
-%description -l pl
-Modu³ perla File::Slurp.
+read_file() does what you would expect.  If you are using its output in
+array context, then it returns an array of lines.  If you are calling
+it from scalar context, then returns the entire file in a single string.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
