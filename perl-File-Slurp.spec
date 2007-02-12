@@ -6,7 +6,7 @@
 %define		pdir	File
 %define		pnam	Slurp
 Summary:	File::Slurp - efficient reading/writing of complete files
-Summary(pl):	File::Slurp - wydajny odczyt/zapis ca≥ych plikÛw
+Summary(pl.UTF-8):   File::Slurp - wydajny odczyt/zapis ca≈Çych plik√≥w
 Name:		perl-File-Slurp
 Version:	9999.09
 Release:	1
@@ -32,17 +32,17 @@ or stdio. If you want to slurp the latter, use the standard techniques
 such as setting $/ to undef, reading <> in a list context, or printing
 all you want to STDOUT.
 
-%description -l pl
-Ten modu≥ dostarcza funkcje pozwalaj±ce na odczyt lub zapis ca≥ych
-plikÛw pojedynczym wywo≥aniem. Zosta≥y zaprojektowane tak, aby by≥y
-proste w uøyciu, umoøliwia≥y przekazywanie lub pobieranie zawarto∂ci
-plikÛw w elastyczny sposÛb oraz by≥y bardzo wydajne. Jest takøe
-funkcja do odczytu wszystkich plikÛw w katalogu innym niø . i .. .
+%description -l pl.UTF-8
+Ten modu≈Ç dostarcza funkcje pozwalajƒÖce na odczyt lub zapis ca≈Çych
+plik√≥w pojedynczym wywo≈Çaniem. Zosta≈Çy zaprojektowane tak, aby by≈Çy
+proste w u≈ºyciu, umo≈ºliwia≈Çy przekazywanie lub pobieranie zawarto≈õci
+plik√≥w w elastyczny spos√≥b oraz by≈Çy bardzo wydajne. Jest tak≈ºe
+funkcja do odczytu wszystkich plik√≥w w katalogu innym ni≈º . i .. .
 
-Naleøy zauwaøyÊ, øe te funkcje dzia≥aj± tylko dla plikÛw, a nie
-potokÛw czy standardowego wej∂cia/wyj∂cia. Dla tych urz±dzeÒ pozostaj±
+Nale≈ºy zauwa≈ºyƒá, ≈ºe te funkcje dzia≈ÇajƒÖ tylko dla plik√≥w, a nie
+potok√≥w czy standardowego wej≈õcia/wyj≈õcia. Dla tych urzƒÖdze≈Ñ pozostajƒÖ
 standardowe techniki, takie jak ustawianie $/ na undef, czytanie <> w
-kontek∂cie listy lub pisanie wszystkiego co chcemy na STDOUT.
+kontek≈õcie listy lub pisanie wszystkiego co chcemy na STDOUT.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
