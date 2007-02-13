@@ -6,7 +6,7 @@
 %define		pdir	File
 %define		pnam	Slurp
 Summary:	File::Slurp - efficient reading/writing of complete files
-Summary(pl.UTF-8):   File::Slurp - wydajny odczyt/zapis całych plików
+Summary(pl.UTF-8):	File::Slurp - wydajny odczyt/zapis całych plików
 Name:		perl-File-Slurp
 Version:	9999.09
 Release:	1
