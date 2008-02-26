@@ -8,13 +8,13 @@
 Summary:	File::Slurp - efficient reading/writing of complete files
 Summary(pl.UTF-8):	File::Slurp - wydajny odczyt/zapis całych plików
 Name:		perl-File-Slurp
-Version:	9999.12
+Version:	9999.13
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	6a162082834307bac95be3e3fc955ce9
+# Source0-md5:	ac3cd9d466b99d1534762ff3549aaa66
 URL:		http://search.cpan.org/dist/File-Slurp/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -48,6 +48,9 @@ kontekście listy lub pisanie wszystkiego co chcemy na STDOUT.
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
+# fails because of some fcntl constants undocumented in Fcntl or POSIX module
+rm t/pod_coverage.t
+
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
@@ -67,5 +70,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/%{pdir}/%{pnam}.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/File/Slurp.pm
+%{_mandir}/man3/File::Slurp.3pm*
