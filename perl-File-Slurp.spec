@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	File
 %define		pnam	Slurp
 Summary:	File::Slurp - efficient reading/writing of complete files
